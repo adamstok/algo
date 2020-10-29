@@ -1,3 +1,16 @@
+import time
+
+def runtime(f):
+    def wrap(*args):
+        t1 = time.time()
+        outp = f(*args)
+        t2 = time.time()
+        print(f'runtime : {t2-t1} sec')
+        return outp
+    return wrap
+
+
+@runtime
 def search(arr,el):
     l = 0
     r = len(arr) - 1
