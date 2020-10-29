@@ -15,6 +15,7 @@ Output:
 ##### BINARY SEARCH
 
 The search function from binary_search.py simply updates the left / right position till the element is (not)found.
+I added a simple runtime decorator to see the elapsed time. 
 
 ```
 Input:
