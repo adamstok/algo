@@ -32,3 +32,5 @@ def search(arr,el):
             print(f'{el} found on index {m}')
             return m
 
+sortedarr = [2, 3, 8, 45, 67, 123, 345, 452, 652, 788, 876, 4566, 76899, 88665, 5464545645]
+search(sortedarr,876)
