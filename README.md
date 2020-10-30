@@ -31,7 +31,7 @@ runtime : 5.221366882324219e-05 sec
 ```
 ---
 
-The search left function searches the first element in the array (if there are duplicates).
+The search_left function searches the first element in the array (if there are duplicates).
 
 ```
 Input:
@@ -59,4 +59,34 @@ Output:
 788 found on index 14
 runtime : 0.00013947486877441406 sec
 ```
+---
 
+The search_right function searches the last element in the array (if there are duplicates).
+
+```
+Input:
+sorted_dups = [2, 2, 2, 3, 8, 8, 45, 67, 123, 123, 123, 345, 452, 652, 788, 788, 788, 876, 4566, 76899, 88665, 5464545645]
+```
+
+```
+search_right(sorted_dups, 2)
+Output:
+1: 345 > 2
+2: 8 > 2
+3: 2 <= 2
+4: 8 > 2
+5: 3 > 2
+2 found on index 2
+runtime : 0.00016689300537109375 sec
+```
+```
+search_right(sorted_dups, 8)
+Output:
+1: 345 > 8
+2: 8 <= 8
+3: 123 > 8
+4: 67 > 8
+5: 45 > 8
+8 found on index 5
+runtime : 0.00030994415283203125 sec
+```
