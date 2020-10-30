@@ -66,6 +66,7 @@ search_left(sorted_dups, 8)
 search_left(sorted_dups, 788)
 
 
+# In a sorted array they could be duplicates. Below is the function to get te last searched element (duplicated or not ) element.
 @runtime
 def search_right(arr,el):
     l = 0
