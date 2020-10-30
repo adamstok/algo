@@ -34,3 +34,40 @@ def search(arr,el):
 
 sortedarr = [2, 3, 8, 45, 67, 123, 345, 452, 652, 788, 876, 4566, 76899, 88665, 5464545645]
 search(sortedarr,876)
+
+
+# In a sorted array they could be duplicates. Below is the function to get te most left (duplicated or not ) element.
+
+@runtime
+def search_left(arr,el):
+    l = 0
+    r = len(arr)
+    count = 0
+    while l < r:
+        m = (l+r) // 2
+        if arr[m] < el :
+            count += 1
+            print(f'{count}: {arr[m]} < {el}')
+            l = m + 1
+        else :
+            count += 1
+            print(f'{count}: {arr[m]} >= {el}')
+            r = m
+    if arr[l] == el :
+        print(f'{el} found on index {l}')
+        return l
+    elif l > r:
+        print(f'{el} not found !')
+        return False
+
+sorted_dups = [2, 2, 2, 3, 8, 8, 45, 67, 123, 123, 123, 345, 452, 652, 788, 788, 788, 876, 4566, 76899, 88665, 5464545645]
+search_left(sorted_dups, 2)
+search_left(sorted_dups, 8)
+search_left(sorted_dups, 788)
+
+
+
+
+
+
+
