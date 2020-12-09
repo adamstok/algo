@@ -90,3 +90,7 @@ Output:
 8 found on index 5
 runtime : 0.00030994415283203125 sec
 ```
+
+##### FIBO
+
+Three ways to calculate the fibo numbers are shown in the fibo.py file. Three functions equals three different runtimes. The winner with no doubt in this example is the fibo3 function , that calculates the 500 fibo number in a 0.0001 sec runtime.
