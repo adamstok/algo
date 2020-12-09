@@ -94,3 +94,30 @@ runtime : 0.00030994415283203125 sec
 ##### FIBO
 
 Three ways to calculate the fibo numbers are shown in the fibo.py file. Three functions equals three different runtimes. The winner with no doubt in this example is the fibo3 function , that calculates the 500 fibo number in a 0.0001 sec runtime.
+
+```
+@timerun
+def fibo3(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        counter = 1
+        val = [0, 1]
+        while counter < n:
+            next_val = val[0] + val[1]
+            val[0] = val[1]
+            val[1] = next_val
+            counter += 1
+        return val[1]
+
+
+print(fibo1(500))  # -> maximum recursion depth exceeded
+print("-----------------")
+print(fibo2(500))  # -> maximum recursion depth exceeded
+print("-----------------")
+print(fibo3(500))  # -> no problem :)
+
+``` 
+
